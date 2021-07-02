@@ -1,0 +1,20 @@
+---
+title: "R Markdown Leaflet Assignment"
+author: "Ben de Haan"
+date: "7/2/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(leaflet)
+```
+
+## Map
+
+```{r map}
+map <- leaflet() %>%
+  addTiles() %>%
+  addMarkers(lat = 52.23, lng = 4.55, popup = "My home country") %>% 
+  addMarkers(lat = 52.68, lng = 4.65, popup = "A spot I like to go")
+map
+```
